@@ -1,0 +1,70 @@
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+  
+<div class="jumbotron" style="margin-top: 50px; padding:50px; width:500px; margin-left: auto; margin-right: auto; background-color: white; border-radius: 1; box-shadow: 0 6px 12px rgba(0,0,0,.1);">
+    <div class="card-content">
+          <h2 class="text-center" style="font-weight: bold;">회원가입</h2>
+          <hr/>
+          
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+          
+            <div class="p-2 field"> 
+              <i class="fa fa-paper-plane"></i>
+              이메일<br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+      
+            <div class="p-2 field">
+              <i class="fa fa-user"></i>이름 <br />
+              <%= f.text_field :name %>
+            </div>
+            
+            <div class="p-2 field">
+              <i class="fa fa-user"></i>학과 <br />
+              <%= f.text_field :student_dept %>
+            </div>
+      
+            
+            <div class="p-2 field">
+              <i class="fa fa-user"></i>학번 <br />
+              <%= f.text_field :student_id %>
+            </div>
+
+            <div class="p-2 field">
+              <i class="fa fa-lock"></i>
+              비밀번호
+              <% if @minimum_password_length %>
+              <small>(최소 <%= @minimum_password_length %>글자)</small><br />
+              <% end %>
+              <%= f.password_field :password, autocomplete: "new-password"%>
+            </div>
+          
+            <div class="p-2 field">
+              					<i class="fa fa-lock"></i>
+              비밀번호 확인<br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+            
+            <!--true = 1, false = 0-->
+            <p><%= f.hidden_field :is_black, :value => 0 %></p>
+            
+          
+            <div class="p-2 actions " style="text-align: center;">
+              <button type="submit" name="commit" class="btn btn1 btn-light"><i class="material-icons">check</i></button>
+            </div>
+            
+            
+          <% end %>
+        
+        
+
+   </div>
+</div>
+</div>
+
+
+   </div>
+</div>

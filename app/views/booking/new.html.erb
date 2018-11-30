@@ -1,0 +1,104 @@
+<%= render "navbar" %>
+    
+<div class="container">
+  <br><br><br>
+  <h1>Booking Information</h1>
+  <hr>
+  
+    <form action = "/create" method = "post">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Classroom</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputClassroom" name="classroom">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="inputDate" class="col-sm-2 col-form-label">Number of people</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="inputPeople" name="people">
+      </div>
+    </div>
+    
+    
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Time</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputTime" name="time">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="inputDate" name="date">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Brief description of event (topic, purpose)</label>
+      <div class="col-sm-10">
+        <!--<input type="text" class="form-control" id="inputDesctiption" rows="3">-->
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+    
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Equipment needed</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              None
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Video Data Projector
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+            <label class="form-check-label" for="gridRadios3">
+              Wireless Microphone
+            </label>
+          </div>
+          
+        </div>
+      </div>
+    </fieldset>
+    
+    <!--<div class="form-group row">-->
+    <!--  <div class="col-sm-2">Checkbox</div>-->
+    <!--  <div class="col-sm-10">-->
+    <!--    <div class="form-check">-->
+    <!--      <input class="form-check-input" type="checkbox" id="gridCheck1">-->
+    <!--      <label class="form-check-label" for="gridCheck1">-->
+    <!--        Example checkbox-->
+    <!--      </label>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Book now!</button>
+      </div>
+    </div>
+  </form>
+  
+</div>
+
+<footer class="py-5 bg-black">
+  <div class="container">
+    <p class="m-0 text-center text-white small">2018 Software Design Project</p>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

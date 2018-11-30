@@ -1,0 +1,68 @@
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+  
+<div class="jumbotron" style="margin-top: 50px; padding:50px; width:500px; margin-left: auto; margin-right: auto; background-color: white; border-radius: 1; box-shadow: 0 6px 12px rgba(0,0,0,.1);">
+    <div class="card-content">
+          <h2 class="text-center" style="font-weight: bold;">관리자 회원가입</h2>
+          <hr/>
+          
+          <div class="form-inputs">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+          
+            <div class="p-2 field"> 
+              <i class="fa fa-paper-plane"></i>
+              이메일<br />
+              <%= f.input :email,
+                required: true,
+                autofocus: true ,
+                input_html: { autocomplete: "email" }%>
+            </div>
+      
+            <div class="p-2 field">
+              <i class="fa fa-user"></i>이름 <br />
+              <%= f.text_field :name %>
+            </div>
+            
+             <div class="p-2 field">
+              <i class="fa fa-user"></i>관리자번호 <br />
+              <%= f.text_field :admin_id %>
+            </div>
+
+            <div class="p-2 field">
+              <i class="fa fa-lock"></i>
+              비밀번호
+              <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+            </div>
+          
+            <div class="p-2 field">
+              					<i class="fa fa-lock"></i>
+              비밀번호 확인<br />
+              <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+            </div>
+            
+          <div class="form-actions">
+            <div class="p-2 actions " style="text-align: center;">
+              <button type="submit" name="commit" class="btn btn1 btn-light"><i class="material-icons">check</i></button>
+            </div>
+          </div>
+            
+          <% end %>
+        
+        
+
+   </div>
+</div>
+</div>
+
+
+   </div>
+</div>
+
